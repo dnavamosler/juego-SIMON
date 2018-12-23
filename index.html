@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="estilos/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.33.1/dist/sweetalert2.all.min.js"></script>
     <title>Simon Dice By: Daniel Nava</title>
 </head>
+
 <body>
-    
+    <div class="content">
+        <div class="juego">
+            <div id="green" class="green" data-color='0'></div>
+            <div id="red" class="red " data-color='1'></div>
+            <div id="yellow" class="yellow" data-color='2'></div>
+            <div id="cyan" class="cyan " data-color='3'></div>
+            <div id="info" class="juego__info">
+                <h1>SIMON</h1>
+                <p>nivel: <span id="level">1</span></p>
+            </div>
+            <button id="button-juego" class="juego__button" onclick="startGame()">Iniciar el juego</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>

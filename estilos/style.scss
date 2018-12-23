@@ -1,0 +1,150 @@
+//variables
+
+$dimension-juego: 400px;
+
+*{
+    box-sizing: border-box;
+}
+
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+body{
+    font-size: arial;
+}
+
+.content{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+    .juego{
+        width: $dimension-juego;
+        height: $dimension-juego;
+        position: relative;
+        display: flex;
+        flex-flow: row wrap;
+        border-radius: 50%;
+        box-shadow: black 0px 1px 20px 1px;
+        border: 5px solid black;
+
+        &__info{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 30px 30px;
+            position: absolute;
+            background-color: #101010;
+            color: white;
+            left: 50%;
+            top: 50%;
+            font-size: .8em;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            border-radius: 50%;
+            -webkit-box-shadow: black 1px 1px;
+            box-shadow: #191414 0 0 20px 1px;
+
+        }
+
+        &__button{
+            width: 500px;
+            height: 120px;
+            position: absolute;
+            background-color: #54c7c1;
+            border: none;
+            border-radius: 20px;
+            top: calc(50% - (120px/2));
+            color: white;
+            left: calc(50% - (500px/2));
+            font-weight: 900;
+            font-size: 2.5em;
+            outline: none;
+            cursor: pointer;
+            transition: .1s;
+
+            &:active{
+                transform: scale(.95);
+            }
+        }
+
+
+        #green{
+            width: 50%;
+            height: 50%;
+            background-color: #70BE44;
+            border: 1px solid transparent;
+            border-radius: 100% 0% 0% 0%;
+            transition: .2s;
+            border: 5px solid black;
+            filter: contrast(1.2) brightness(1.2);
+        }
+        #red{
+            width: 50%;
+            height: 50%;
+            background-color: #EB2627;
+            border: 1px solid transparent;
+            border-radius: 0% 100% 0% 0%;
+            transition: .2s;
+            border: 5px solid black;
+            filter: contrast(1.2) brightness(1.2);
+        }
+        #yellow{
+            width: 50%;
+            height: 50%;
+            background-color: #EBE944;
+            border: 1px solid transparent;
+            border-radius: 0% 0% 0% 100%;
+            transition: .2s;
+            border: 5px solid black;
+            filter: contrast(1.2) brightness(1.2);
+        }
+        #cyan{
+            width: 50%;
+            height: 50%;
+            background-color:#42C3DE;
+            border: 1px solid transparent;
+            border-radius: 0% 0% 100% 0%;
+            transition: .2s;
+            border: 5px solid black;
+            filter: contrast(1.2) brightness(1.2);
+        }
+
+        // clases para colores iluminados
+
+        .light{
+            filter: brightness(1.7)!important;
+        }
+
+        // .cyan.light{
+        //     background-color: #b94ecc!important;
+            
+        //     box-shadow: 1px 2px 15px 0px rgba(185, 78, 204, .5);
+        // }
+        // .green.light{
+        //     background-color: #3a83bd!important;
+            
+        //     box-shadow: -1px -2px 15px 0px rgba(58, 131, 189, .5);
+        // }
+        // .red.light{
+        //     background-color: #e25349!important;
+            
+        //     box-shadow: 1px -2px 15px 0px rgba(226, 83, 73, .5);
+        // }
+        // .yellow.light{
+        //     background-color: #68cc6c!important;
+            
+        //     box-shadow: -1px 2px 15px 0px rgba(104, 204, 108, 0.5);
+        // }
+    }
+}
+.hide{
+    display: none;
+}
+
+.pointer{
+    cursor: pointer;
+}
