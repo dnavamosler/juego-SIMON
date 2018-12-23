@@ -141,8 +141,8 @@ body {
 }
 
 .content .juego .light {
-  -webkit-filter: brightness(1.7) !important;
-          filter: brightness(1.7) !important;
+  -webkit-filter: brightness(1.9) contrast(1.5) !important;
+          filter: brightness(1.9) contrast(1.5) !important;
 }
 
 .hide {
